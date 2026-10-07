@@ -1,0 +1,358 @@
+[
+  {
+    "id": "100330Y2130601105538980",
+    "slug": "city-hall",
+    "name": "三沙市政府",
+    "face_size": 1792,
+    "pole_source_size": 128,
+    "tiles": [
+      {
+        "x": 0,
+        "y": 0,
+        "sha256": "5d0c2411df3a6bbe63eec8d969b3b93e20583c349e52aa087be1d1c0f88d33c0"
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "sha256": "15b2e488da8ed4a17dd88a7ef4fd9df742e10022d6675b5b314ce29b0729ac31"
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "sha256": "0910cc709d76d38fa581f462487ffa0a728dd313dd72349e650e77fa36d2a00a"
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "sha256": "3cafbf439ef1021c80291eb70b97789b80225b71c43ec40e54bc732845846a38"
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "sha256": "d4beb660c1fb958fc728b0422ddbf443c844b99e24f5ce474ac82ff23e551fae"
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "sha256": "95f90a918b0f043d38894e8ded0481394441e336c67f721c789500b8c41c4721"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "sha256": "40c42b8642ffb6a9ec4d3cf3083df61f6b5bdce2889ab7bae480443407380074"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "sha256": "958f4e7a4fc9e7bceb1f427ea450e02c93aebca18ebbdeb59557b3a1d24a329d"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "sha256": "e85ecffc5be6031c974de8b9c27dfe4628ff48a751b5f4652823ce914b2cca39"
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "sha256": "fc8b224f82eae1088c8e6bc6b1d95aa2dfbe8d0f343233cd2906a91adb49ba9e"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "sha256": "02da2a671692787e60a0a7069c51107a7bed0cbd87ad736fd9038c71837bc842"
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "sha256": "48e6e7e4922ecf54f6a1ffe33b83cf76a7b8b8fac54b9bbfddcfb160b8a91f38"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "sha256": "360a4954f5e3735fd90e3024bc37d8c73bf38cdfd087043bcb3d0ad37f794bb7"
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "sha256": "f043f17e5aa7db47fa02c89c16281ad19907a4de2575a766bc6d4df3c8e9fa4c"
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "sha256": "dcd416f3da841dd648039270a79ac766a0fa37f1c7bf3daf271c0de8f8bda4a4"
+      },
+      {
+        "x": 7,
+        "y": 1,
+        "sha256": "8229f10677db0bc42fe550c12bd5de3fcf0f0a3e939a148e3fcda9b0e8def3a5"
+      }
+    ]
+  },
+  {
+    "id": "100330Y2130602101548790",
+    "slug": "museum",
+    "name": "西沙海洋博物馆门口",
+    "face_size": 1792,
+    "pole_source_size": 128,
+    "tiles": [
+      {
+        "x": 0,
+        "y": 0,
+        "sha256": "fe0a7352725ba214e6b57e0bb7304c6bacbb2847ed61d0e50002e35caaa7d342"
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "sha256": "d73997156b640d1e47c8e256cdc1001ac28a27c3339a2c7adf0bbb2fab95db17"
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "sha256": "8fbcb941b3ed1f754972f6070b9e1592d8dffd4b4a489924dfc0bca4d0199138"
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "sha256": "70e8b1d6a1eb860115aff3f42586c0173909567f4cc89c0352c0da4a64824449"
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "sha256": "768f7946ee8fb3e82f05402565ac3be3c0b1aaa71f8203d84d7067267f97dfa3"
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "sha256": "bb42a5235547b407c3ed0ffd8b7daea8620f5f6076369f91e00089de3058ff8f"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "sha256": "b46dcdf2797a0bf6fe7ea33f25692ad359e3ae6c7084f236bf2a6281b04b4783"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "sha256": "a3f4283e581f436862fcbaff678f05d6238e22d8f7a7e129b3150ecffb2fae5f"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "sha256": "011d8724f463d3db8e4455212223577aa17af74bee2ad986d9b89b160a56f9a3"
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "sha256": "3d7a20a4b5051d00ed22e2926feddbe75dddf79cee01ff59f2e4053b713bc32f"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "sha256": "941ed714dc7df1c3dc9681ec4290c0540c4b5357cd0d0c47ae3e9d3522b5b7c9"
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "sha256": "698642fa2c11164185a35bf667f028105b43bc799e24b2e6eae8d0e9de20e0d1"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "sha256": "e124cef4941540b223e1abd46ccdbcbd86dae394273a21080fa3af767fd8ce79"
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "sha256": "d4864f29dc59f927fa57e463c796e586c05ef86ee8ff672b5c28741924c4531c"
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "sha256": "40030858457fee228ab8ade65750d89a63d8e9092d425a19d46712d60205e1b3"
+      },
+      {
+        "x": 7,
+        "y": 1,
+        "sha256": "8077b9a518a271b6195ce8131391eb5f735b8e4cbd64ebdad47a85c1e9e1b0f6"
+      }
+    ]
+  },
+  {
+    "id": "100331Y2130603114754110",
+    "slug": "hotel",
+    "name": "西沙宾馆前台与大堂",
+    "face_size": 1792,
+    "pole_source_size": 128,
+    "tiles": [
+      {
+        "x": 0,
+        "y": 0,
+        "sha256": "1c30881899c94cbcafeffb109f0d7099fa74ab526ae4ceb82e5478cfb8bf1f3a"
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "sha256": "1df5a09638748cd852c11571eca5bb8af27dfd1c8edf001d386af6d058309af9"
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "sha256": "7ca9434ae656b47ef172eae2f62ccd6614003ef65fd1268fbfb8c0efb91e7b1a"
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "sha256": "31bc19e8d60cd7d826af4dcef2f7c4d89550b1681750cb89a1998f9cf9e37099"
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "sha256": "54f5332a1218936b0f74fc4ba9b9dbaa53ff9a0d2030f929927bfc2b3347deb6"
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "sha256": "eee64b05d538e9584e67647256bbe2b2180475b5b1ec54621c32c9415b319d5e"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "sha256": "48ebca16901f52b70c1a4c4031651c7a9181cf744351e1abf3376ee718882850"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "sha256": "b30c5875e62829ff37ddc707df6939f852705fd7053582e82af211438e089b20"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "sha256": "26bf0e5e09c432c8d645cb420f41081df54358bcec36d2bd20f7add66ef24f21"
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "sha256": "7e212de94b7760703515114e3b83e57b2a12837c4f96d72c47397e6fe15621ba"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "sha256": "a7b57788917e14729df6d141af581d9f6e5fd1833ddd74e6c3d16f87843cb825"
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "sha256": "82839d6fc8f35af28a7f14ea601205acc90f283bb8e117d92de88d2b9d6c5fd9"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "sha256": "b4f56100e3a5792c2de5f42aeaa9eb5e50e4f2a968865489cfdf67b012f7e6b5"
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "sha256": "37321a08e2ebfea647a8e2ad744fedc4b75973ed4249de48d28e6965974c448f"
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "sha256": "59fe312004ea742026c2d13fdce89513f097f6de45ac69ca83a32d51582efea3"
+      },
+      {
+        "x": 7,
+        "y": 1,
+        "sha256": "399eb32b597575a26cc9fabad3c36692c2b0396d723ee61dc3c87163168af1fc"
+      }
+    ]
+  },
+  {
+    "id": "100332Y2130603163801220",
+    "slug": "reef",
+    "name": "老龙头祖国万岁礁",
+    "face_size": 1792,
+    "pole_source_size": 128,
+    "tiles": [
+      {
+        "x": 0,
+        "y": 0,
+        "sha256": "df908c8f6545d1ccc866fc5f6c7b3d3bdacd4845e8abc195db6eb3668cefa11d"
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "sha256": "bb647cab09c667a57a28b3e1afdd01e865caedc9462ce3b6b069f59fdb05094e"
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "sha256": "fc2582bfa21d52d8e1191ddca4489f62c7eaec774d5d53e6e1dd77b219d92595"
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "sha256": "ddb059b3d70558e973cfe7be71e619f60b57e1061e317ca48ea84eb1c06c8db2"
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "sha256": "dab0cefe43574ca8c74166d2b0ca8d183a3f28befd55b502979173b8ca8c6a56"
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "sha256": "967edb3fb620fc0874ed6da06bd683b05279187b81327892cab0a34d653850ad"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "sha256": "5e4a0688239a839d8ed23b158b5e899cb1a3631d7c276058bbc092d4df5c739c"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "sha256": "df0fc86b8ae0abf890893c21bbfabbdf3476351647e21be4fbc6e7fe92fa1f83"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "sha256": "b8eab9d998f773197ad7d2ae31ef5819835db9d8927ff495c6ee0bd9d1c115c3"
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "sha256": "735538c1a97e31a42bddf12fdb3ad3a8ce360c3ee351f8f65d328b43a96fcd83"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "sha256": "f2f19a2fbbc5b5ea557d6cc636052092fe88201ae3d12a1f44ed989ae65fa08a"
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "sha256": "aebf815df4822f892f723a332f2fb27533b2546ca8db9b9617d7dc3bfaec4301"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "sha256": "e7bf7966c9c0b9bea512b463c31a5ded6c72e0d9a14b277d58abee2e41e54d67"
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "sha256": "1988b029c9e9159f7b59d3af9eb7d5f67446245762c511ebda9a32c602ba445a"
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "sha256": "3f06862df790eb1e15ed98561d8806b28005563282291a78a52382ea1882f1c4"
+      },
+      {
+        "x": 7,
+        "y": 1,
+        "sha256": "40df024f9cf4de01abcb020d6f79e1a0d7ee083c859a83f3b24954563fa8a335"
+      }
+    ]
+  }
+]

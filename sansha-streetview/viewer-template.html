@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三沙历史街景 · 离线查看</title>
+<style>
+body{margin:0;background:#102030;color:#fff;font:15px system-ui}canvas{display:block;width:100vw;height:100vh;touch-action:none;cursor:grab}aside{position:fixed;top:14px;left:14px;background:#102030dc;padding:16px;border-radius:12px;max-width:min(420px,85vw)}h1{font-size:20px;margin:0 0 10px}select,button{font:inherit;padding:8px;border-radius:6px}p{margin:8px 0;font-size:13px;line-height:1.5}#status{color:#ffe39b}footer{position:fixed;bottom:12px;left:14px;font-size:12px;background:#102030ba;padding:6px}#identifier{overflow-wrap:anywhere}
+</style>
+<canvas id="view"></canvas><aside><h1>三沙历史街景</h1><select id="scene"></select> <button id="reset">复位</button><p>拖动转向，滚轮缩放。图片已内嵌，可离线打开。</p><p id="identifier"></p><p>2013 年 6 月历史影像。四周由高清切片恢复；天空和地面中心使用低清缩略图，极区方向未独立校准。</p><p id="status">正在加载…</p></aside><footer>影像来源：腾讯街景。此为本地研究查看器。</footer>
+<script>
+const SCENES=__SCENES__;
+const canvas=document.querySelector('#view'), statusText=document.querySelector('#status');
+const context=canvas.getContext('webgl');
+if(!context){statusText.textContent='此浏览器未提供 WebGL，请直接查看文件夹中的 panorama-4096.jpg。';throw Error('WebGL unavailable');}
+function shader(kind,source){const compiled=context.createShader(kind);context.shaderSource(compiled,source);context.compileShader(compiled);if(!context.getShaderParameter(compiled,context.COMPILE_STATUS))throw Error(context.getShaderInfoLog(compiled));return compiled;}
+const program=context.createProgram();
+context.attachShader(program,shader(context.VERTEX_SHADER,'attribute vec2 position; varying vec2 screen; void main(){screen=position;gl_Position=vec4(position,0.,1.);}'));
+context.attachShader(program,shader(context.FRAGMENT_SHADER,`precision highp float; varying vec2 screen; uniform sampler2D picture; uniform float yaw; uniform float pitch; uniform float aspect; uniform float zoom; const float PI=3.141592653589793; void main(){vec3 ray=normalize(vec3(screen.x*aspect*zoom,screen.y*zoom,1.));ray=vec3(ray.x,ray.y*cos(pitch)+ray.z*sin(pitch),-ray.y*sin(pitch)+ray.z*cos(pitch));ray=vec3(ray.x*cos(yaw)+ray.z*sin(yaw),ray.y,-ray.x*sin(yaw)+ray.z*cos(yaw));vec2 uv=vec2(atan(ray.x,ray.z)/(2.*PI)+.5,.5-asin(clamp(ray.y,-1.,1.))/PI);gl_FragColor=texture2D(picture,uv);}`));
+context.linkProgram(program);if(!context.getProgramParameter(program,context.LINK_STATUS))throw Error(context.getProgramInfoLog(program));context.useProgram(program);
+const buffer=context.createBuffer();context.bindBuffer(context.ARRAY_BUFFER,buffer);context.bufferData(context.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),context.STATIC_DRAW);
+const position=context.getAttribLocation(program,'position');context.enableVertexAttribArray(position);context.vertexAttribPointer(position,2,context.FLOAT,false,0,0);
+const texture=context.createTexture();context.bindTexture(context.TEXTURE_2D,texture);
+context.texParameteri(context.TEXTURE_2D,context.TEXTURE_MIN_FILTER,context.LINEAR);context.texParameteri(context.TEXTURE_2D,context.TEXTURE_MAG_FILTER,context.LINEAR);context.texParameteri(context.TEXTURE_2D,context.TEXTURE_WRAP_S,context.REPEAT);context.texParameteri(context.TEXTURE_2D,context.TEXTURE_WRAP_T,context.CLAMP_TO_EDGE);
+const uniforms=Object.fromEntries(['yaw','pitch','aspect','zoom'].map(name=>[name,context.getUniformLocation(program,name)]));
+let yaw=0,pitch=0,zoom=.8,drag=null,isReady=false;
+function render(){if(!isReady)return;canvas.width=Math.round(innerWidth*devicePixelRatio);canvas.height=Math.round(innerHeight*devicePixelRatio);context.viewport(0,0,canvas.width,canvas.height);context.uniform1f(uniforms.yaw,yaw);context.uniform1f(uniforms.pitch,pitch);context.uniform1f(uniforms.aspect,canvas.width/canvas.height);context.uniform1f(uniforms.zoom,zoom);context.drawArrays(context.TRIANGLES,0,6);}
+const selection=document.querySelector('#scene');SCENES.forEach((scene,index)=>selection.add(new Option(scene.name,index)));
+function loadScene(){isReady=false;statusText.textContent='正在加载…';const selected=SCENES[Number(selection.value)],image=new Image();document.querySelector('#identifier').textContent='Pano ID: '+selected.id;image.onload=()=>{context.bindTexture(context.TEXTURE_2D,texture);context.texImage2D(context.TEXTURE_2D,0,context.RGB,context.RGB,context.UNSIGNED_BYTE,image);isReady=true;yaw=0;pitch=0;zoom=.8;render();statusText.textContent='已加载：'+selected.name;};image.onerror=()=>statusText.textContent='图片加载失败，请查看独立 JPG。';image.src=selected.image;}
+canvas.onpointerdown=event=>{drag={x:event.clientX,y:event.clientY};canvas.setPointerCapture(event.pointerId);};
+canvas.onpointermove=event=>{if(!drag)return;yaw-=(event.clientX-drag.x)*.004;pitch=Math.max(-1.5,Math.min(1.5,pitch+(event.clientY-drag.y)*.004));drag={x:event.clientX,y:event.clientY};render();};
+canvas.onpointerup=()=>drag=null;canvas.onpointercancel=()=>drag=null;
+canvas.addEventListener('wheel',event=>{event.preventDefault();zoom=Math.max(.2,Math.min(1.5,zoom*Math.exp(event.deltaY*.001)));render();},{passive:false});
+document.querySelector('#reset').onclick=()=>{yaw=0;pitch=0;zoom=.8;render();};selection.onchange=loadScene;window.onresize=render;loadScene();
+</script></html>

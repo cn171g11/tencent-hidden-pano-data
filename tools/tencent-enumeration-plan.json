@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "endpoint": "https://sv.map.qq.com/sv",
+    "workers": 3,
+    "interval_seconds": 0.3,
+    "timeout_seconds": 8,
+    "journal": "tencent-enumeration-journal.jsonl",
+    "output_prefix": "tencent-enumeration-results"
+  },
+  "batches": [
+    {"label":"Liaoning_Dandong_known_batch","regions":["1406"],"codes":"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ","dates":["140710"],"scenes":[1]},
+    {"label":"Chongqing_known_batch","regions":["1008"],"codes":"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ","dates":["141009"],"scenes":[1]},
+    {"label":"Henan_Nanyang_known_batch","regions":["2313"],"codes":"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ","dates":["150228"],"scenes":[1]},
+    {"label":"Liaoning_neighbor_regions","regions":["1401","1402","1403","1404","1405","1407","1408","1409","1410","1411","1413","1414"],"codes":"01","dates":["140710"],"scenes":[1]},
+    {"label":"Henan_neighbor_regions","regions":["2301","2302","2303","2304","2305","2306","2307","2308","2309","2310","2311","2312","2314","2315","2316","2317"],"codes":"01","dates":["150228"],"scenes":[1]},
+    {"label":"Sichuan_transfer_date","regions":["1007","2801","2802","2804","2805","2806","2807","2808","2809","2811","2812","2813","2818","2820"],"codes":"01","dates":["141009"],"scenes":[1]},
+    {"label":"Liaoning_date_controls","regions":["1406"],"codes":"01","dates":["140709","140711","140703","140717","160710"],"scenes":[1]},
+    {"label":"Chongqing_date_controls","regions":["1008"],"codes":"01","dates":["141008","141010","141002","141016","161009"],"scenes":[1]},
+    {"label":"Henan_date_controls","regions":["2313"],"codes":"01","dates":["150227","150301","150221","150307","160228"],"scenes":[1]},
+    {"label":"Henan_expanded_codes","regions":["2301","2302","2303","2304","2305","2306","2307","2308","2309","2310","2311","2312","2314","2315","2316","2317"],"codes":"23456789AB","dates":["150228"],"scenes":[1]},
+    {"label":"Other_provinces_Henan_date","regions":["1201","1210","1101","1104","2401","2402","2501","2201","3101","3103","1016"],"codes":"01","dates":["150228"],"scenes":[1]},
+    {"label":"Chongqing_missing_first_scene","regions":["1008"],"codes":"3IOSWXYZ","dates":["141009"],"scenes":[2,3,4,5]},
+    {"label":"Dandong_scene_enumeration","regions":["1406"],"codes":"1CI","dates":["140710"],"scenes":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]},
+    {"label":"Chongqing_scene_enumeration","regions":["1008"],"codes":"57MT","dates":["141009"],"scenes":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]},
+    {"label":"Henan_scene_enumeration","regions":["2305","2313"],"codes":"1","dates":["150228"],"scenes":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]}
+  ]
+}

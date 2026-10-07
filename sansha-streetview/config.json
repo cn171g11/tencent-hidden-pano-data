@@ -1,0 +1,15 @@
+{
+  "tile_url": "https://sv1.map.qq.com/tile",
+  "thumb_url": "https://sv1.map.qq.com/thumb",
+  "workers": 3,
+  "timeout_seconds": 15,
+  "tile_size": 896,
+  "face_tiles": 2,
+  "levels": [0, 1],
+  "scenes": [
+    {"id":"100330Y2130601105538980","slug":"city-hall","name":"三沙市政府"},
+    {"id":"100330Y2130602101548790","slug":"museum","name":"西沙海洋博物馆门口"},
+    {"id":"100331Y2130603114754110","slug":"hotel","name":"西沙宾馆前台与大堂"},
+    {"id":"100332Y2130603163801220","slug":"reef","name":"老龙头祖国万岁礁"}
+  ]
+}
